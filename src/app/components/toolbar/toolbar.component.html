@@ -1,0 +1,10 @@
+<div class="P-toolbar-wrap" app-clickOutside (clickOutside)="close()">
+  <div (click)="changeIsOpenState($event)" class="P-toolbar-btn" [class.P-rotate]="rotate" [class.light]="light">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="P-toolbar-content" (click)="close($event)" [class.show]="isOpen">
+    <ng-content></ng-content>
+  </div>
+</div>
